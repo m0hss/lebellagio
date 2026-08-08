@@ -39,7 +39,7 @@ export function MenuPageClient() {
       </div>
 
       {/* Sticky category nav */}
-      <div className="sticky top-16 z-30 bg-background/95 backdrop-blur-sm border-b border-border shadow-sm">
+      <div className="md:sticky md:top-16 z-30 bg-background/95 backdrop-blur-sm border-b border-border shadow-sm">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="flex items-center gap-1 overflow-x-auto py-3 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             {MENU_CATEGORIES.map((cat) => (
