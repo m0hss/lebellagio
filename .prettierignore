@@ -1,0 +1,7 @@
+.next
+node_modules
+.pnpm-store
+.cursor
+pnpm-lock.yaml
+public
+tsconfig.tsbuildinfo

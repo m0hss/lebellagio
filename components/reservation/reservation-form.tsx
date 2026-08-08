@@ -10,11 +10,7 @@ import { Calendar } from "@/components/ui/calendar"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover"
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
 import {
   Select,
   SelectContent,
@@ -50,7 +46,7 @@ function ReservationFormFields({
   const [guests, setGuests] = useState(initialValues.guests ?? "")
   const [time, setTime] = useState(initialValues.time ?? "")
   const [date, setDate] = useState<Date | undefined>(
-    initialValues.date ? new Date(initialValues.date) : undefined
+    initialValues.date ? new Date(initialValues.date) : undefined,
   )
   const [dateOpen, setDateOpen] = useState(false)
   const dayPickerLocale = locale === "fr" ? fr : enUS
@@ -157,7 +153,7 @@ function ReservationFormFields({
               id="res-date"
               className={cn(
                 "flex h-8 w-full items-center justify-between gap-1.5 rounded-lg border border-input bg-transparent px-2.5 text-sm transition-colors outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50",
-                !date && "text-muted-foreground"
+                !date && "text-muted-foreground",
               )}
               aria-required="true"
             >

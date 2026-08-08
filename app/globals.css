@@ -1,13 +1,13 @@
-@import 'tailwindcss';
-@import 'tw-animate-css';
-@import 'shadcn/tailwind.css';
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --font-sans: 'Inter', 'Inter Fallback';
-  --font-serif: 'Playfair Display', 'Playfair Display Fallback';
-  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --font-sans: "Inter", "Inter Fallback";
+  --font-serif: "Playfair Display", "Playfair Display Fallback";
+  --font-mono: "Geist Mono", "Geist Mono Fallback";
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -41,13 +41,24 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
-  --shadow-2xs: var(--shadow-x) var(--shadow-y) color-mix(in srgb, var(--shadow-color) calc(var(--shadow-opacity) * 100%), transparent);
-  --shadow-xs: var(--shadow-x) var(--shadow-y) var(--shadow-blur) var(--shadow-spread) color-mix(in srgb, var(--shadow-color) calc(var(--shadow-opacity) * 100%), transparent);
-  --shadow-sm: var(--shadow-x) var(--shadow-y) calc(var(--shadow-blur) * 1.5) var(--shadow-spread) color-mix(in srgb, var(--shadow-color) calc(var(--shadow-opacity) * 100%), transparent);
-  --shadow-md: calc(var(--shadow-x) * 2) calc(var(--shadow-y) * 2) calc(var(--shadow-blur) * 3) calc(var(--shadow-spread) - 1px) color-mix(in srgb, var(--shadow-color) calc(var(--shadow-opacity) * 100%), transparent);
-  --shadow-lg: calc(var(--shadow-x) * 4) calc(var(--shadow-y) * 4) calc(var(--shadow-blur) * 5) calc(var(--shadow-spread) - 3px) color-mix(in srgb, var(--shadow-color) calc(var(--shadow-opacity) * 100%), transparent);
-  --shadow-xl: calc(var(--shadow-x) * 6) calc(var(--shadow-y) * 6) calc(var(--shadow-blur) * 7) calc(var(--shadow-spread) - 5px) color-mix(in srgb, var(--shadow-color) calc(var(--shadow-opacity) * 100%), transparent);
-  --shadow-2xl: calc(var(--shadow-x) * 8) calc(var(--shadow-y) * 8) calc(max(0px, var(--shadow-blur) * 9 - 8px)) calc(var(--shadow-spread) - 12px) color-mix(in srgb, var(--shadow-color) calc(var(--shadow-opacity) * 250%), transparent);
+  --shadow-2xs: var(--shadow-x) var(--shadow-y)
+    color-mix(in srgb, var(--shadow-color) calc(var(--shadow-opacity) * 100%), transparent);
+  --shadow-xs: var(--shadow-x) var(--shadow-y) var(--shadow-blur) var(--shadow-spread)
+    color-mix(in srgb, var(--shadow-color) calc(var(--shadow-opacity) * 100%), transparent);
+  --shadow-sm: var(--shadow-x) var(--shadow-y) calc(var(--shadow-blur) * 1.5) var(--shadow-spread)
+    color-mix(in srgb, var(--shadow-color) calc(var(--shadow-opacity) * 100%), transparent);
+  --shadow-md: calc(var(--shadow-x) * 2) calc(var(--shadow-y) * 2) calc(var(--shadow-blur) * 3)
+    calc(var(--shadow-spread) - 1px)
+    color-mix(in srgb, var(--shadow-color) calc(var(--shadow-opacity) * 100%), transparent);
+  --shadow-lg: calc(var(--shadow-x) * 4) calc(var(--shadow-y) * 4) calc(var(--shadow-blur) * 5)
+    calc(var(--shadow-spread) - 3px)
+    color-mix(in srgb, var(--shadow-color) calc(var(--shadow-opacity) * 100%), transparent);
+  --shadow-xl: calc(var(--shadow-x) * 6) calc(var(--shadow-y) * 6) calc(var(--shadow-blur) * 7)
+    calc(var(--shadow-spread) - 5px)
+    color-mix(in srgb, var(--shadow-color) calc(var(--shadow-opacity) * 100%), transparent);
+  --shadow-2xl: calc(var(--shadow-x) * 8) calc(var(--shadow-y) * 8)
+    calc(max(0px, var(--shadow-blur) * 9 - 8px)) calc(var(--shadow-spread) - 12px)
+    color-mix(in srgb, var(--shadow-color) calc(var(--shadow-opacity) * 250%), transparent);
   --shadow: var(--shadow-md);
   --color-shadow-color: var(--shadow-color);
   --shadow-opacity: var(--shadow-opacity);
@@ -60,40 +71,40 @@
 
 :root {
   color-scheme: light;
-  --background: #FBF6EE;
-  --foreground: #4A1D26;
-  --card: #FFFFFF;
-  --card-foreground: #4A1D26;
-  --popover: #FFFFFF;
-  --popover-foreground: #4A1D26;
-  --primary: #8B1E2D;
-  --primary-foreground: #FFFAF4;
-  --secondary: #C99A5D;
-  --secondary-foreground: #4A1D26;
-  --muted: #F2EBE0;
-  --muted-foreground: #7A6A6E;
-  --accent: #F4E9D8;
-  --accent-foreground: #4A1D26;
-  --destructive: #C0392B;
-  --destructive-foreground: #FFFFFF;
-  --border: #E8DDD1;
-  --input: #E8DDD1;
-  --ring: #C99A5D;
+  --background: #fbf6ee;
+  --foreground: #4a1d26;
+  --card: #ffffff;
+  --card-foreground: #4a1d26;
+  --popover: #ffffff;
+  --popover-foreground: #4a1d26;
+  --primary: #8b1e2d;
+  --primary-foreground: #fffaf4;
+  --secondary: #c99a5d;
+  --secondary-foreground: #4a1d26;
+  --muted: #f2ebe0;
+  --muted-foreground: #7a6a6e;
+  --accent: #f4e9d8;
+  --accent-foreground: #4a1d26;
+  --destructive: #c0392b;
+  --destructive-foreground: #ffffff;
+  --border: #e8ddd1;
+  --input: #e8ddd1;
+  --ring: #c99a5d;
   --radius: 0.5rem;
-  --sidebar: #4A1D26;
-  --sidebar-foreground: #F7F0E8;
-  --sidebar-primary: #C99A5D;
-  --sidebar-primary-foreground: #4A1D26;
-  --sidebar-accent: #4A1D26;
-  --sidebar-accent-foreground: #F7F0E8;
-  --sidebar-border: #4A1D26;
-  --sidebar-ring: #C99A5D;
+  --sidebar: #4a1d26;
+  --sidebar-foreground: #f7f0e8;
+  --sidebar-primary: #c99a5d;
+  --sidebar-primary-foreground: #4a1d26;
+  --sidebar-accent: #4a1d26;
+  --sidebar-accent-foreground: #f7f0e8;
+  --sidebar-border: #4a1d26;
+  --sidebar-ring: #c99a5d;
   --shadow-x: 0px;
   --shadow-y: 1px;
   --shadow-blur: 2px;
   --shadow-spread: 0px;
   --shadow-opacity: 0.08;
-  --shadow-color: #4A1D26;
+  --shadow-color: #4a1d26;
 }
 
 @layer base {
@@ -107,8 +118,11 @@
   html {
     @apply font-sans;
   }
-  h1, h2, h3, h4 {
-    font-family: var(--font-playfair), 'Playfair Display', serif;
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-playfair), "Playfair Display", serif;
   }
 }
 
@@ -120,18 +134,32 @@
 }
 
 @keyframes fade {
-  from { filter: blur(2px); opacity: 0; }
-  to { filter: blur(0); opacity: 1; }
+  from {
+    filter: blur(2px);
+    opacity: 0;
+  }
+  to {
+    filter: blur(0);
+    opacity: 1;
+  }
 }
 
 @keyframes slide {
-  from { translate: var(--slide-offset); }
-  to { translate: 0; }
+  from {
+    translate: var(--slide-offset);
+  }
+  to {
+    translate: 0;
+  }
 }
 
 @keyframes slide-y {
-  from { transform: translateY(var(--slide-y-offset, 10px)); }
-  to { transform: translateY(0); }
+  from {
+    transform: translateY(var(--slide-y-offset, 10px));
+  }
+  to {
+    transform: translateY(0);
+  }
 }
 
 ::view-transition-old(.fade-out) {
@@ -200,8 +228,12 @@
 
 /* ── Reviews marquee ─────────────────────────────────────── */
 @keyframes marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 .animate-marquee {

@@ -33,11 +33,28 @@ export function MenuPreviewSection() {
             <p className="text-muted-foreground mt-2">{t(locale, "menu_preview_subheading")}</p>
           </div>
           <div className="flex flex-col sm:flex-row gap-2 shrink-0">
-            <Button nativeButton={false} render={<a href="/menu.pdf" download="Le-Bellagio-Carte.pdf" aria-label={t(locale, "menu_download_pdf")} />} variant="ghost" size="lg" className="text-muted-foreground gap-1.5">
+            <Button
+              nativeButton={false}
+              render={
+                <a
+                  href="/menu.pdf"
+                  download="Le-Bellagio-Carte.pdf"
+                  aria-label={t(locale, "menu_download_pdf")}
+                />
+              }
+              variant="ghost"
+              size="lg"
+              className="text-muted-foreground gap-1.5"
+            >
               <FileText size={15} aria-hidden="true" />
               {t(locale, "menu_download_pdf")}
             </Button>
-            <Button nativeButton={false} render={<Link href="/menu" />} size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 gap-1.5">
+            <Button
+              nativeButton={false}
+              render={<Link href="/menu" />}
+              size="lg"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 gap-1.5"
+            >
               {t(locale, "menu_see_all")}
               <ArrowRight size={15} aria-hidden="true" />
             </Button>
@@ -55,7 +72,13 @@ export function MenuPreviewSection() {
 
         {/* Footer CTA */}
         <Reveal className="text-center mt-10">
-          <Button nativeButton={false} render={<Link href="/menu" />} variant="outline" size="lg" className="border-primary/30 text-primary hover:bg-accent gap-2">
+          <Button
+            nativeButton={false}
+            render={<Link href="/menu" />}
+            variant="outline"
+            size="lg"
+            className="border-primary/30 text-primary hover:bg-accent gap-2"
+          >
             {t(locale, "menu_see_all")}
             <ArrowRight size={16} aria-hidden="true" />
           </Button>

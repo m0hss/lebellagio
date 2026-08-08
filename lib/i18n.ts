@@ -71,7 +71,8 @@ export const translations = {
     contact_form_email: "Votre email",
     contact_form_message: "Votre message",
     contact_form_submit: "Envoyer",
-    contact_form_success: "Votre message s'ouvre dans WhatsApp : envoyez-le pour nous le transmettre directement.",
+    contact_form_success:
+      "Votre message s'ouvre dans WhatsApp : envoyez-le pour nous le transmettre directement.",
 
     // Reservation form
     form_name: "Nom et prénom",
@@ -154,7 +155,8 @@ export const translations = {
     chat_confirm_send: "Envoyer la demande",
     chat_success_reservation_title: "Demande envoyée !",
     chat_success_order_title: "Commande envoyée !",
-    chat_confirmation_note: "Envoyez le message WhatsApp pré-rempli pour transmettre votre demande au restaurant.",
+    chat_confirmation_note:
+      "Envoyez le message WhatsApp pré-rempli pour transmettre votre demande au restaurant.",
     chat_new_request: "Nouvelle demande",
     chat_open_form: "Ouvrir le formulaire pré-rempli",
     chat_send_whatsapp: "Envoyer sur WhatsApp",
@@ -175,7 +177,8 @@ export const translations = {
 
     // Offline page
     offline_heading: "Vous êtes hors ligne",
-    offline_text: "Vérifiez votre connexion internet et réessayez. Vous pouvez aussi nous appeler directement.",
+    offline_text:
+      "Vérifiez votre connexion internet et réessayez. Vous pouvez aussi nous appeler directement.",
     offline_retry: "Réessayer",
   },
   en: {
@@ -331,7 +334,7 @@ export const translations = {
     // PWA install prompt
     pwa_install_text: "Install Le Bellagio on your home screen for faster access.",
     pwa_install_cta: "Install app",
-    pwa_install_ios_hint: "Tap Share, then \"Add to Home Screen\".",
+    pwa_install_ios_hint: 'Tap Share, then "Add to Home Screen".',
     pwa_later: "Later",
 
     // Offline page

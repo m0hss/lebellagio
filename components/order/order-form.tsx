@@ -28,11 +28,7 @@ interface OrderInitialValues {
   payment?: string
 }
 
-function OrderFormFields({
-  initialValues = {},
-}: {
-  initialValues?: OrderInitialValues
-}) {
+function OrderFormFields({ initialValues = {} }: { initialValues?: OrderInitialValues }) {
   const { locale } = useLocale()
   const [submitted, setSubmitted] = useState(false)
   const [whatsappUrl, setWhatsappUrl] = useState("")
@@ -119,7 +115,7 @@ function OrderFormFields({
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div className="space-y-1.5">
           <Label htmlFor="order-pickup">{t(locale, "order_form_pickup")} *</Label>
-          <Select value={pickup} onValueChange={setPickup} required>
+          <Select value={pickup} onValueChange={(value) => setPickup(value ?? "")} required>
             <SelectTrigger id="order-pickup" className="w-full">
               <SelectValue placeholder={locale === "fr" ? "Choisir…" : "Choose…"} />
             </SelectTrigger>
@@ -134,7 +130,7 @@ function OrderFormFields({
         </div>
         <div className="space-y-1.5">
           <Label htmlFor="order-payment">{t(locale, "order_form_payment")}</Label>
-          <Select value={payment} onValueChange={setPayment}>
+          <Select value={payment} onValueChange={(value) => setPayment(value ?? "")}>
             <SelectTrigger id="order-payment" className="w-full">
               <SelectValue placeholder={locale === "fr" ? "Choisir…" : "Choose…"} />
             </SelectTrigger>

@@ -75,7 +75,11 @@ export function InstallPrompt() {
     >
       <p className="flex-1 text-sm text-foreground leading-relaxed">
         {t(locale, "pwa_install_text")}
-        {ios && <span className="block text-muted-foreground mt-1">{t(locale, "pwa_install_ios_hint")}</span>}
+        {ios && (
+          <span className="block text-muted-foreground mt-1">
+            {t(locale, "pwa_install_ios_hint")}
+          </span>
+        )}
       </p>
       <div className="flex items-center gap-2 shrink-0">
         <Button size="sm" variant="outline" onClick={dismiss} className="text-xs border-border">

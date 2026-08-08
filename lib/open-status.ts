@@ -44,7 +44,10 @@ export interface OpenStatus {
   opensToday?: boolean
 }
 
-export function getOpenStatus(now: Date = new Date(), hours: DayHours[] = OPENING_HOURS): OpenStatus {
+export function getOpenStatus(
+  now: Date = new Date(),
+  hours: DayHours[] = OPENING_HOURS,
+): OpenStatus {
   const { dayIndex, minutes } = getParisNow(now)
   const today = hours.find((d) => d.day === dayIndex)
 

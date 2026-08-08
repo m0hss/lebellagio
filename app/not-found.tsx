@@ -25,10 +25,21 @@ export default function NotFound() {
             {t(locale, "not_found_subtitle")}
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-            <Button nativeButton={false} render={<Link href="/" />} size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 gap-2">
+            <Button
+              nativeButton={false}
+              render={<Link href="/" />}
+              size="lg"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 gap-2"
+            >
               {t(locale, "not_found_home")}
             </Button>
-            <Button nativeButton={false} render={<Link href="/menu" />} size="lg" variant="outline" className="border-primary/30 text-primary hover:bg-accent gap-2">
+            <Button
+              nativeButton={false}
+              render={<Link href="/menu" />}
+              size="lg"
+              variant="outline"
+              className="border-primary/30 text-primary hover:bg-accent gap-2"
+            >
               <UtensilsCrossed size={16} aria-hidden="true" />
               {t(locale, "not_found_menu")}
             </Button>

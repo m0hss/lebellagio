@@ -50,7 +50,7 @@ export function MenuPageClient() {
                   "shrink-0 px-4 py-1.5 rounded-full text-sm font-medium transition-colors whitespace-nowrap",
                   activeCategory === cat.id
                     ? "bg-primary text-primary-foreground"
-                    : "text-muted-foreground hover:text-foreground hover:bg-accent"
+                    : "text-muted-foreground hover:text-foreground hover:bg-accent",
                 )}
                 aria-current={activeCategory === cat.id ? "true" : undefined}
               >
@@ -58,7 +58,19 @@ export function MenuPageClient() {
               </button>
             ))}
             <div className="ml-auto shrink-0">
-              <Button nativeButton={false} render={<a href="/menu.pdf" download="Le-Bellagio-Carte.pdf" aria-label={t(locale, "menu_download_pdf")} />} size="sm" variant="outline" className="bg-accent text-accent-foreground border-border/50 hover:bg-accent/80 hover:text-accent-foreground gap-1.5 text-xs">
+              <Button
+                nativeButton={false}
+                render={
+                  <a
+                    href="/menu.pdf"
+                    download="Le-Bellagio-Carte.pdf"
+                    aria-label={t(locale, "menu_download_pdf")}
+                  />
+                }
+                size="sm"
+                variant="outline"
+                className="bg-accent text-accent-foreground border-border/50 hover:bg-accent/80 hover:text-accent-foreground gap-1.5 text-xs"
+              >
                 <FileText size={13} aria-hidden="true" />
                 {t(locale, "menu_download_pdf")}
               </Button>
@@ -73,7 +85,9 @@ export function MenuPageClient() {
           <section
             key={cat.id}
             id={cat.id}
-            ref={(el) => { sectionRefs.current[cat.id] = el }}
+            ref={(el) => {
+              sectionRefs.current[cat.id] = el
+            }}
             aria-labelledby={`cat-${cat.id}-heading`}
           >
             <div className="flex items-center gap-4 mb-6">
@@ -95,10 +109,14 @@ export function MenuPageClient() {
                       <MenuCard item={item} />
                     </Reveal>
                   ) : (
-                    <Reveal key={idx} delay={Math.min(idx * 60, 240)} className="bg-card rounded-xl border border-border p-4">
+                    <Reveal
+                      key={idx}
+                      delay={Math.min(idx * 60, 240)}
+                      className="bg-card rounded-xl border border-border p-4"
+                    >
                       <MenuCard item={item} compact />
                     </Reveal>
-                  )
+                  ),
                 )}
               </div>
             ) : (
@@ -126,11 +144,22 @@ export function MenuPageClient() {
               : "Book your table or place a takeaway order."}
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-            <Button nativeButton={false} render={<Link href="/reservation" />} size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 gap-2">
+            <Button
+              nativeButton={false}
+              render={<Link href="/reservation" />}
+              size="lg"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 gap-2"
+            >
               <CalendarDays size={16} aria-hidden="true" />
               {t(locale, "reservation_cta")}
             </Button>
-            <Button nativeButton={false} render={<a href={`tel:${RESTAURANT.phoneRaw}`} />} size="lg" variant="outline" className="border-primary/30 text-primary hover:bg-accent gap-2">
+            <Button
+              nativeButton={false}
+              render={<a href={`tel:${RESTAURANT.phoneRaw}`} />}
+              size="lg"
+              variant="outline"
+              className="border-primary/30 text-primary hover:bg-accent gap-2"
+            >
               <Phone size={16} aria-hidden="true" />
               {RESTAURANT.phone}
             </Button>

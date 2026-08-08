@@ -26,7 +26,7 @@ export function HoursTable() {
             key={i}
             className={cn(
               "border-b border-border/60 last:border-0",
-              i === currentDayIndex && "text-primary font-semibold"
+              i === currentDayIndex && "text-primary font-semibold",
             )}
           >
             <td className="py-2.5 pr-4 font-medium whitespace-nowrap">

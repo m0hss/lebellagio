@@ -29,14 +29,14 @@ export function ChatBubble() {
           <MessageCircleMore
             className={cn(
               "absolute size-6 transition-all duration-300 ease-in-out",
-              open ? "rotate-90 scale-0 opacity-0" : "rotate-0 scale-100 opacity-100"
+              open ? "rotate-90 scale-0 opacity-0" : "rotate-0 scale-100 opacity-100",
             )}
             aria-hidden="true"
           />
           <X
             className={cn(
               "absolute size-6 transition-all duration-300 ease-in-out",
-              open ? "rotate-0 scale-100 opacity-100" : "-rotate-90 scale-0 opacity-0"
+              open ? "rotate-0 scale-100 opacity-100" : "-rotate-90 scale-0 opacity-0",
             )}
             aria-hidden="true"
           />

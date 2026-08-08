@@ -31,10 +31,21 @@ export function OrderCtaSection() {
               {t(locale, "order_subheading")}
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
-              <Button nativeButton={false} render={<Link href="/order" />} size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
+              <Button
+                nativeButton={false}
+                render={<Link href="/order" />}
+                size="lg"
+                className="bg-primary text-primary-foreground hover:bg-primary/90"
+              >
                 {t(locale, "order_cta")}
               </Button>
-              <Button nativeButton={false} render={<a href={`tel:${RESTAURANT.phoneRaw}`} />} size="lg" variant="outline" className="border-primary/30 text-primary hover:bg-accent gap-2">
+              <Button
+                nativeButton={false}
+                render={<a href={`tel:${RESTAURANT.phoneRaw}`} />}
+                size="lg"
+                variant="outline"
+                className="border-primary/30 text-primary hover:bg-accent gap-2"
+              >
                 <Phone size={16} aria-hidden="true" />
                 {t(locale, "order_phone_cta")}
               </Button>
@@ -42,31 +53,47 @@ export function OrderCtaSection() {
           </Reveal>
 
           {/* Info card */}
-          <Reveal animation="fade-left" delay={100} className="bg-card rounded-2xl border border-border p-6 md:p-8">
+          <Reveal
+            animation="fade-left"
+            delay={100}
+            className="bg-card rounded-2xl border border-border p-6 md:p-8"
+          >
             <h3 className="font-serif font-semibold text-lg mb-4 text-foreground">
               {locale === "fr" ? "Informations pratiques" : "Practical info"}
             </h3>
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li className="flex items-start gap-3">
-                <span className="w-1.5 h-1.5 rounded-full bg-secondary mt-2 shrink-0" aria-hidden="true" />
+                <span
+                  className="w-1.5 h-1.5 rounded-full bg-secondary mt-2 shrink-0"
+                  aria-hidden="true"
+                />
                 {locale === "fr"
                   ? "Commandez par téléphone ou via notre formulaire en ligne"
                   : "Order by phone or via our online form"}
               </li>
               <li className="flex items-start gap-3">
-                <span className="w-1.5 h-1.5 rounded-full bg-secondary mt-2 shrink-0" aria-hidden="true" />
+                <span
+                  className="w-1.5 h-1.5 rounded-full bg-secondary mt-2 shrink-0"
+                  aria-hidden="true"
+                />
                 {locale === "fr"
                   ? "Indiquez votre heure de retrait souhaitée"
                   : "Indicate your desired pickup time"}
               </li>
               <li className="flex items-start gap-3">
-                <span className="w-1.5 h-1.5 rounded-full bg-secondary mt-2 shrink-0" aria-hidden="true" />
+                <span
+                  className="w-1.5 h-1.5 rounded-full bg-secondary mt-2 shrink-0"
+                  aria-hidden="true"
+                />
                 {locale === "fr"
                   ? "Paiement sur place : " + PAYMENT_METHODS.map((p) => p.fr).join(", ")
                   : "Payment on site: " + PAYMENT_METHODS.map((p) => p.en).join(", ")}
               </li>
               <li className="flex items-start gap-3">
-                <span className="w-1.5 h-1.5 rounded-full bg-secondary mt-2 shrink-0" aria-hidden="true" />
+                <span
+                  className="w-1.5 h-1.5 rounded-full bg-secondary mt-2 shrink-0"
+                  aria-hidden="true"
+                />
                 {locale === "fr"
                   ? "Retrait au restaurant : 23 pl. Henri Barbusse, Alès"
                   : "Pickup at the restaurant: 23 pl. Henri Barbusse, Alès"}

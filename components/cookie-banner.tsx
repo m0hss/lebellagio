@@ -46,7 +46,11 @@ export function CookieBanner() {
         <Button size="sm" variant="outline" onClick={refuse} className="text-xs border-border">
           {t(locale, "cookie_refuse")}
         </Button>
-        <Button size="sm" onClick={accept} className="text-xs bg-primary text-primary-foreground hover:bg-primary/90">
+        <Button
+          size="sm"
+          onClick={accept}
+          className="text-xs bg-primary text-primary-foreground hover:bg-primary/90"
+        >
           {t(locale, "cookie_accept")}
         </Button>
         <button

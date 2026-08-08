@@ -65,7 +65,8 @@ export default function ReservationPage() {
                 Confirmation
               </h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Vous recevrez une confirmation par téléphone ou email sous 24h. Pour les groupes de plus de 6 personnes, merci de nous appeler directement.
+                Vous recevrez une confirmation par téléphone ou email sous 24h. Pour les groupes de
+                plus de 6 personnes, merci de nous appeler directement.
               </p>
             </div>
           </Reveal>

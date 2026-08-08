@@ -5,8 +5,7 @@ import { RESTAURANT } from "@/lib/restaurant"
 
 export const metadata: Metadata = {
   title: "Gestion des cookies – Le Bellagio, Alès",
-  description:
-    "Politique de gestion des cookies du restaurant Le Bellagio à Alès.",
+  description: "Politique de gestion des cookies du restaurant Le Bellagio à Alès.",
 }
 
 export default function CookiesPage() {
@@ -32,9 +31,9 @@ export default function CookiesPage() {
               Qu&apos;est-ce qu&apos;un cookie ?
             </h2>
             <p>
-              Un cookie est un petit fichier texte déposé sur votre terminal (ordinateur,
-              tablette, smartphone) lors de la visite d&apos;un site web. Il permet de
-              mémoriser certaines informations sur votre navigation.
+              Un cookie est un petit fichier texte déposé sur votre terminal (ordinateur, tablette,
+              smartphone) lors de la visite d&apos;un site web. Il permet de mémoriser certaines
+              informations sur votre navigation.
             </p>
           </section>
 
@@ -71,9 +70,9 @@ export default function CookiesPage() {
               Comment gérer vos cookies ?
             </h2>
             <p>
-              Vous pouvez à tout moment modifier vos préférences en cliquant sur le bandeau
-              cookie qui s&apos;affiche lors de votre première visite. Vous pouvez également
-              configurer votre navigateur pour bloquer ou supprimer les cookies&nbsp;:
+              Vous pouvez à tout moment modifier vos préférences en cliquant sur le bandeau cookie
+              qui s&apos;affiche lors de votre première visite. Vous pouvez également configurer
+              votre navigateur pour bloquer ou supprimer les cookies&nbsp;:
             </p>
             <ul className="mt-3 space-y-2 pl-4 list-disc list-inside">
               <li>
@@ -118,15 +117,13 @@ export default function CookiesPage() {
               </li>
             </ul>
             <p className="mt-4">
-              Notez que la désactivation de certains cookies peut altérer votre expérience
-              de navigation sur notre site.
+              Notez que la désactivation de certains cookies peut altérer votre expérience de
+              navigation sur notre site.
             </p>
           </section>
 
           <section>
-            <h2 className="font-serif text-xl font-bold text-foreground mb-3">
-              Contact
-            </h2>
+            <h2 className="font-serif text-xl font-bold text-foreground mb-3">Contact</h2>
             <p>
               Pour toute question relative à l&apos;utilisation des cookies sur ce site,
               contactez-nous à{" "}

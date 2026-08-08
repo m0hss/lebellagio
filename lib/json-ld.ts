@@ -45,7 +45,7 @@ export function buildRestaurantJsonLd() {
         dayOfWeek: SCHEMA_DAY_NAMES[day.day],
         opens,
         closes,
-      }))
+      })),
     ),
     sameAs: [RESTAURANT.facebook, RESTAURANT.instagram],
   }

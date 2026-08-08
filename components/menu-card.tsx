@@ -29,12 +29,17 @@ export function MenuCard({ item, compact = false }: MenuCardProps) {
           <div className="flex items-center gap-2 mb-0.5">
             <p className="font-medium text-foreground text-sm">{item.name[locale]}</p>
             {item.featured && (
-              <Badge variant="secondary" className="text-[10px] px-1.5 py-0 bg-secondary/20 text-secondary-foreground shrink-0">
+              <Badge
+                variant="secondary"
+                className="text-[10px] px-1.5 py-0 bg-secondary/20 text-secondary-foreground shrink-0"
+              >
                 {t(locale, "menu_featured_label")}
               </Badge>
             )}
           </div>
-          <p className="text-xs text-muted-foreground leading-relaxed">{item.description[locale]}</p>
+          <p className="text-xs text-muted-foreground leading-relaxed">
+            {item.description[locale]}
+          </p>
         </div>
         <p className="font-semibold text-primary shrink-0 text-sm">{item.price}€</p>
       </div>
@@ -42,10 +47,12 @@ export function MenuCard({ item, compact = false }: MenuCardProps) {
   }
 
   return (
-    <article className={cn(
-      "bg-card rounded-xl overflow-hidden border border-border transition-all hover:shadow-md hover:-translate-y-0.5",
-      item.featured && "ring-1 ring-secondary/40"
-    )}>
+    <article
+      className={cn(
+        "bg-card rounded-xl overflow-hidden border border-border transition-all hover:shadow-md hover:-translate-y-0.5",
+        item.featured && "ring-1 ring-secondary/40",
+      )}
+    >
       {item.image && (
         <div className="aspect-[4/3] relative overflow-hidden group">
           <Image
@@ -73,7 +80,10 @@ export function MenuCard({ item, compact = false }: MenuCardProps) {
         </div>
         <p className="text-sm text-muted-foreground leading-relaxed">{item.description[locale]}</p>
         {!item.image && item.featured && (
-          <Badge variant="secondary" className="mt-2 text-xs bg-secondary/20 text-secondary-foreground">
+          <Badge
+            variant="secondary"
+            className="mt-2 text-xs bg-secondary/20 text-secondary-foreground"
+          >
             {t(locale, "menu_featured_label")}
           </Badge>
         )}

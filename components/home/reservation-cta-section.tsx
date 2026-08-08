@@ -12,16 +12,17 @@ export function ReservationCtaSection() {
   const { locale } = useLocale()
 
   return (
-    <section
-      aria-labelledby="reservation-cta-heading"
-      className="py-16 md:py-24"
-    >
+    <section aria-labelledby="reservation-cta-heading" className="py-16 md:py-24">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <Reveal animation="zoom" className="bg-primary rounded-2xl overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
             {/* Copy */}
             <div className="p-8 md:p-12 lg:p-16 flex flex-col justify-center">
-              <CalendarDays size={40} className="text-primary-foreground/50 mb-6" aria-hidden="true" />
+              <CalendarDays
+                size={40}
+                className="text-primary-foreground/50 mb-6"
+                aria-hidden="true"
+              />
               <h2
                 id="reservation-cta-heading"
                 className="font-serif text-3xl sm:text-4xl font-bold text-primary-foreground mb-4 text-pretty"

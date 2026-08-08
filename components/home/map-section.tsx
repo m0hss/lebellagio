@@ -24,7 +24,10 @@ export function MapSection() {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
           {/* Info panel */}
-          <Reveal animation="fade-right" className="bg-card rounded-2xl border border-border p-6 md:p-8 flex flex-col justify-between gap-6">
+          <Reveal
+            animation="fade-right"
+            className="bg-card rounded-2xl border border-border p-6 md:p-8 flex flex-col justify-between gap-6"
+          >
             <div>
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
@@ -47,7 +50,13 @@ export function MapSection() {
             </div>
 
             <Button
-              render={<a href="https://www.google.com/maps/dir/?api=1&destination=Le+Bellagio+23+place+Henri+Barbusse+Al%C3%A8s" target="_blank" rel="noopener noreferrer" />}
+              render={
+                <a
+                  href="https://www.google.com/maps/dir/?api=1&destination=Le+Bellagio+23+place+Henri+Barbusse+Al%C3%A8s"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                />
+              }
               nativeButton={false}
               size="lg"
               className="bg-primary text-primary-foreground hover:bg-primary/90 gap-2 w-full"
@@ -71,7 +80,11 @@ export function MapSection() {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title={locale === "fr" ? "Localisation du restaurant Le Bellagio à Alès" : "Location of Le Bellagio restaurant in Alès"}
+              title={
+                locale === "fr"
+                  ? "Localisation du restaurant Le Bellagio à Alès"
+                  : "Location of Le Bellagio restaurant in Alès"
+              }
             />
           </Reveal>
         </div>

@@ -25,7 +25,13 @@ export const metadata: Metadata = {
   title: "Le Bellagio – Restaurant français à Alès",
   description:
     "Restaurant Le Bellagio à Alès. Cuisine française fait maison, pizzas, à emporter. 23 place Henri Barbusse, 30100 Alès. Réservation : +33 4 66 52 99 59.",
-  keywords: ["restaurant alès", "le bellagio", "cuisine française", "pizza alès", "restaurant gard"],
+  keywords: [
+    "restaurant alès",
+    "le bellagio",
+    "cuisine française",
+    "pizza alès",
+    "restaurant gard",
+  ],
   applicationName: "Le Bellagio",
   appleWebApp: {
     capable: true,
@@ -81,7 +87,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <script
           type="application/ld+json"
-          // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{ __html: JSON.stringify(restaurantJsonLd) }}
         />
       </head>

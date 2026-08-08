@@ -20,22 +20,22 @@ pnpm exec tsc --noEmit   # the real type check; the build ignores TS errors
 
 ## Where things live
 
-| Concern | Location |
-| --- | --- |
-| Routes and layouts | `app/` |
-| Theme, CSS variables, Tailwind setup | `app/globals.css` |
-| Page sections | `components/home/`, `components/menu/`, `components/reservation/`, `components/order/` |
-| Shared chrome | `components/page-shell.tsx`, `header.tsx`, `footer.tsx`, `mobile-action-bar.tsx` |
-| Chat assistant | `components/chat-bubble/` (`chat-panel.tsx` UI, `use-chat-flow.ts` reducer, `lib/chat-flows.ts` steps) |
-| shadcn primitives | `components/ui/` |
-| All restaurant content | `lib/restaurant.ts` |
-| UI strings | `lib/i18n.ts` + `lib/locale-context.tsx` |
-| WhatsApp message builders | `lib/whatsapp.ts` |
-| Open/closed computation | `lib/open-status.ts` |
-| SEO structured data | `lib/json-ld.ts` |
-| PWA install banner + SW registration | `components/pwa/` |
-| Service worker | `public/sw.js` |
-| Offline fallback page | `app/offline/page.tsx` |
+| Concern                              | Location                                                                                               |
+| ------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| Routes and layouts                   | `app/`                                                                                                 |
+| Theme, CSS variables, Tailwind setup | `app/globals.css`                                                                                      |
+| Page sections                        | `components/home/`, `components/menu/`, `components/reservation/`, `components/order/`                 |
+| Shared chrome                        | `components/page-shell.tsx`, `header.tsx`, `footer.tsx`, `mobile-action-bar.tsx`                       |
+| Chat assistant                       | `components/chat-bubble/` (`chat-panel.tsx` UI, `use-chat-flow.ts` reducer, `lib/chat-flows.ts` steps) |
+| shadcn primitives                    | `components/ui/`                                                                                       |
+| All restaurant content               | `lib/restaurant.ts`                                                                                    |
+| UI strings                           | `lib/i18n.ts` + `lib/locale-context.tsx`                                                               |
+| WhatsApp message builders            | `lib/whatsapp.ts`                                                                                      |
+| Open/closed computation              | `lib/open-status.ts`                                                                                   |
+| SEO structured data                  | `lib/json-ld.ts`                                                                                       |
+| PWA install banner + SW registration | `components/pwa/`                                                                                      |
+| Service worker                       | `public/sw.js`                                                                                         |
+| Offline fallback page                | `app/offline/page.tsx`                                                                                 |
 
 Never edit `.next/`, `node_modules/`, `.pnpm-store/`, `pnpm-lock.yaml` by hand, or `tsconfig.tsbuildinfo`.
 

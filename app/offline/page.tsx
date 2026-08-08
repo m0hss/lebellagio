@@ -13,13 +13,7 @@ export default function OfflinePage() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-sidebar px-4 py-16">
       <div className="max-w-sm w-full text-center">
-        <Image
-          src="/logo.svg"
-          alt="Le Bellagio"
-          width={64}
-          height={64}
-          className="mx-auto mb-6"
-        />
+        <Image src="/logo.svg" alt="Le Bellagio" width={64} height={64} className="mx-auto mb-6" />
         <h1 className="font-serif text-2xl sm:text-3xl font-bold text-sidebar-foreground mb-3 text-pretty">
           {t(locale, "offline_heading")}
         </h1>

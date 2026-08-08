@@ -104,9 +104,8 @@ function reducer(state: ChatState, action: Action): ChatState {
 export function useChatFlow() {
   const [state, dispatch] = useReducer(reducer, initialState)
 
-  const flow = state.screen === "reservation" || state.screen === "order"
-    ? FLOWS[state.screen]
-    : undefined
+  const flow =
+    state.screen === "reservation" || state.screen === "order" ? FLOWS[state.screen] : undefined
 
   const currentStep: FlowStep | undefined = flow ? flow.steps[state.stepIndex] : undefined
   const isSummary = !!flow && state.stepIndex >= flow.steps.length && !state.submitted
@@ -117,7 +116,7 @@ export function useChatFlow() {
   const answer = useCallback(
     (stepId: string, value: string, display: string) =>
       dispatch({ type: "ANSWER", stepId, value, display }),
-    []
+    [],
   )
   const skip = useCallback((stepId: string) => dispatch({ type: "SKIP", stepId }), [])
   const back = useCallback(() => dispatch({ type: "BACK" }), [])
@@ -141,6 +140,20 @@ export function useChatFlow() {
       submit,
       restartFlow,
     }),
-    [state, flow, currentStep, isSummary, isLargeGroup, selectFlow, goToMenu, answer, skip, back, editStep, submit, restartFlow]
+    [
+      state,
+      flow,
+      currentStep,
+      isSummary,
+      isLargeGroup,
+      selectFlow,
+      goToMenu,
+      answer,
+      skip,
+      back,
+      editStep,
+      submit,
+      restartFlow,
+    ],
   )
 }

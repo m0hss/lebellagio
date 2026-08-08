@@ -52,7 +52,10 @@ export function HoursSection() {
             <ul className="space-y-2.5">
               {PAYMENT_METHODS.map((p, i) => (
                 <li key={i} className="flex items-center gap-2 text-sm text-muted-foreground">
-                  <span className="w-1.5 h-1.5 rounded-full bg-secondary shrink-0" aria-hidden="true" />
+                  <span
+                    className="w-1.5 h-1.5 rounded-full bg-secondary shrink-0"
+                    aria-hidden="true"
+                  />
                   {p[locale]}
                 </li>
               ))}

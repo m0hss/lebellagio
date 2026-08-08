@@ -105,9 +105,7 @@ export function ChatPanel({ onClose }: ChatPanelProps) {
         {state.screen === "menu" && <MenuScreen onSelect={chat.selectFlow} />}
         {state.screen === "hours" && <HoursScreen />}
         {state.screen === "call" && <CallScreen />}
-        {(state.screen === "reservation" || state.screen === "order") && (
-          <FlowScreen chat={chat} />
-        )}
+        {(state.screen === "reservation" || state.screen === "order") && <FlowScreen chat={chat} />}
       </div>
     </div>
   )
@@ -318,25 +316,13 @@ function UserBubble({ children }: { children: React.ReactNode }) {
   )
 }
 
-function StepInput({
-  step,
-  chat,
-}: {
-  step: FlowStep
-  chat: ReturnType<typeof useChatFlow>
-}) {
+function StepInput({ step, chat }: { step: FlowStep; chat: ReturnType<typeof useChatFlow> }) {
   if (step.kind === "chips") return <ChipsStepInput step={step} chat={chat} />
   if (step.kind === "date") return <DateStepInput step={step} chat={chat} />
   return <TextStepInput step={step} chat={chat} />
 }
 
-function ChipsStepInput({
-  step,
-  chat,
-}: {
-  step: FlowStep
-  chat: ReturnType<typeof useChatFlow>
-}) {
+function ChipsStepInput({ step, chat }: { step: FlowStep; chat: ReturnType<typeof useChatFlow> }) {
   const { locale } = useLocale()
   return (
     <div className="flex flex-wrap gap-1.5">
@@ -363,13 +349,7 @@ function ChipsStepInput({
   )
 }
 
-function DateStepInput({
-  step,
-  chat,
-}: {
-  step: FlowStep
-  chat: ReturnType<typeof useChatFlow>
-}) {
+function DateStepInput({ step, chat }: { step: FlowStep; chat: ReturnType<typeof useChatFlow> }) {
   const { locale } = useLocale()
   const [open, setOpen] = useState(false)
   const dayPickerLocale = locale === "fr" ? fr : enUS
@@ -378,7 +358,7 @@ function DateStepInput({
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger
         className={cn(
-          "flex h-9 w-full max-w-[220px] items-center justify-between gap-1.5 rounded-lg border border-input bg-background px-3 text-sm transition-colors outline-none select-none hover:border-primary/40 focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50"
+          "flex h-9 w-full max-w-[220px] items-center justify-between gap-1.5 rounded-lg border border-input bg-background px-3 text-sm transition-colors outline-none select-none hover:border-primary/40 focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50",
         )}
       >
         <span>{t(locale, "chat_choose_date")}</span>
@@ -404,13 +384,7 @@ function DateStepInput({
   )
 }
 
-function TextStepInput({
-  step,
-  chat,
-}: {
-  step: FlowStep
-  chat: ReturnType<typeof useChatFlow>
-}) {
+function TextStepInput({ step, chat }: { step: FlowStep; chat: ReturnType<typeof useChatFlow> }) {
   const { locale } = useLocale()
   const [value, setValue] = useState("")
 
@@ -431,7 +405,9 @@ function TextStepInput({
               key={suggestion.value}
               type="button"
               onClick={() =>
-                setValue((prev) => (prev ? `${prev}, ${suggestion.label[locale]}` : suggestion.label[locale]))
+                setValue((prev) =>
+                  prev ? `${prev}, ${suggestion.label[locale]}` : suggestion.label[locale],
+                )
               }
               className="rounded-full border border-dashed border-border bg-background px-2.5 py-1 text-xs font-medium text-muted-foreground transition-colors hover:border-primary/40 hover:text-foreground"
             >
@@ -465,13 +441,7 @@ function TextStepInput({
   )
 }
 
-function SummaryCard({
-  flowId,
-  chat,
-}: {
-  flowId: FlowId
-  chat: ReturnType<typeof useChatFlow>
-}) {
+function SummaryCard({ flowId, chat }: { flowId: FlowId; chat: ReturnType<typeof useChatFlow> }) {
   const { locale } = useLocale()
   const { state, flow } = chat
   if (!flow) return null
@@ -521,7 +491,7 @@ function SummaryCard({
 function buildChatWhatsAppUrl(
   locale: Locale,
   flowId: FlowId,
-  displayAnswers: Record<string, string>
+  displayAnswers: Record<string, string>,
 ): string {
   const message =
     flowId === "reservation"

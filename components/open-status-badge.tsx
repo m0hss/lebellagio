@@ -61,7 +61,7 @@ export function OpenStatusBadge({
         <span
           className={cn(
             "size-2 shrink-0 rounded-full",
-            status.open ? "bg-green-500" : "bg-muted-foreground/50"
+            status.open ? "bg-green-500" : "bg-muted-foreground/50",
           )}
           aria-hidden="true"
         />

@@ -19,12 +19,7 @@ export function HeroSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 min-h-[90vh] lg:min-h-[85vh]">
           {/* Text col */}
           <div className="relative flex flex-col justify-center py-16 lg:py-20 pr-0 lg:pr-12 z-10">
-            <Reveal animation="fade-up" duration={600}>
-              <p className="text-secondary text-sm font-medium tracking-widest uppercase mb-4">
-                {RESTAURANT.addressShort}
-              </p>
-            </Reveal>
-            <Reveal animation="fade-up" duration={700} delay={80}>
+            <Reveal animation="fade-up" duration={700}>
               <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl font-bold text-sidebar-foreground leading-tight mb-6 text-pretty">
                 {t(locale, "hero_heading")}
               </h1>
@@ -75,7 +70,10 @@ export function HeroSection() {
                 </li>
                 <li className="flex items-center gap-1.5">
                   <Phone size={14} className="text-secondary shrink-0" aria-hidden="true" />
-                  <a href={`tel:${RESTAURANT.phoneRaw}`} className="hover:text-secondary transition-colors">
+                  <a
+                    href={`tel:${RESTAURANT.phoneRaw}`}
+                    className="hover:text-secondary transition-colors"
+                  >
                     {RESTAURANT.phone}
                   </a>
                 </li>

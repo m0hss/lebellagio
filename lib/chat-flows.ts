@@ -31,23 +31,52 @@ export interface FlowDefinition {
 
 // Shared with the real reservation form (components/reservation/reservation-form.tsx)
 export const TIME_SLOTS = [
-  "12:00", "12:15", "12:30", "12:45",
-  "13:00", "13:15", "13:30", "13:45",
+  "12:00",
+  "12:15",
+  "12:30",
+  "12:45",
+  "13:00",
+  "13:15",
+  "13:30",
+  "13:45",
   "14:00",
-  "19:00", "19:15", "19:30", "19:45",
-  "20:00", "20:15", "20:30", "20:45",
-  "21:00", "21:15", "21:30", "21:45",
+  "19:00",
+  "19:15",
+  "19:30",
+  "19:45",
+  "20:00",
+  "20:15",
+  "20:30",
+  "20:45",
+  "21:00",
+  "21:15",
+  "21:30",
+  "21:45",
   "22:00",
 ]
 
 // Shared with the real order form (components/order/order-form.tsx)
 export const PICKUP_TIMES = [
-  "12:00", "12:15", "12:30", "12:45",
-  "13:00", "13:15", "13:30", "13:45",
+  "12:00",
+  "12:15",
+  "12:30",
+  "12:45",
+  "13:00",
+  "13:15",
+  "13:30",
+  "13:45",
   "14:00",
-  "19:00", "19:15", "19:30", "19:45",
-  "20:00", "20:15", "20:30", "20:45",
-  "21:00", "21:30", "22:00",
+  "19:00",
+  "19:15",
+  "19:30",
+  "19:45",
+  "20:00",
+  "20:15",
+  "20:30",
+  "20:45",
+  "21:00",
+  "21:30",
+  "22:00",
 ]
 
 export function isPastDay(date: Date): boolean {
@@ -93,8 +122,11 @@ const PAYMENT_OPTIONS: ChipOption[] = [
 
 const DISH_SUGGESTIONS: ChipOption[] = MENU_CATEGORIES.flatMap((category) =>
   category.items
-    .filter((item): item is typeof item & { featured: true } => "featured" in item && item.featured === true)
-    .map((item) => ({ value: item.name.fr, label: item.name }))
+    .filter(
+      (item): item is typeof item & { featured: true } =>
+        "featured" in item && item.featured === true,
+    )
+    .map((item) => ({ value: item.name.fr, label: item.name })),
 )
 
 export const RESERVATION_FLOW: FlowDefinition = {
@@ -160,7 +192,10 @@ export const ORDER_FLOW: FlowDefinition = {
     {
       id: "pickup",
       kind: "chips",
-      question: { fr: "À quelle heure souhaitez-vous récupérer votre commande ?", en: "What pickup time would you like?" },
+      question: {
+        fr: "À quelle heure souhaitez-vous récupérer votre commande ?",
+        en: "What pickup time would you like?",
+      },
       options: PICKUP_OPTIONS,
     },
     {

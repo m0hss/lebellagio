@@ -56,7 +56,7 @@ export function Reveal({
           observer.disconnect()
         }
       },
-      { threshold: 0.15 }
+      { threshold: 0.15 },
     )
 
     observer.observe(node)
@@ -71,11 +71,15 @@ export function Reveal({
       className={cn(
         !skipAnimation && !isVisible && "opacity-0",
         isVisible && !skipAnimation && `animate-in ${ANIMATION_CLASSES[animation]}`,
-        className
+        className,
       )}
       style={
         !skipAnimation
-          ? { animationDuration: `${duration}ms`, animationDelay: `${delay}ms`, animationFillMode: "both" }
+          ? {
+              animationDuration: `${duration}ms`,
+              animationDelay: `${delay}ms`,
+              animationFillMode: "both",
+            }
           : undefined
       }
     >

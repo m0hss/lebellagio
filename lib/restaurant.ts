@@ -37,15 +37,65 @@ export interface DayHours {
 // and the JSON-LD openingHoursSpecification. Keep in sync with HOURS.
 export const OPENING_HOURS: DayHours[] = [
   { day: 0, ranges: [] }, // Sunday — closed
-  { day: 1, ranges: [["12:00", "14:00"], ["19:00", "22:00"]] },
-  { day: 2, ranges: [["12:00", "14:00"], ["19:00", "22:00"]] },
-  { day: 3, ranges: [["12:00", "14:00"], ["19:00", "22:00"]] },
-  { day: 4, ranges: [["12:00", "14:00"], ["19:00", "22:00"]] },
-  { day: 5, ranges: [["12:00", "14:00"], ["19:00", "22:30"]] },
-  { day: 6, ranges: [["12:00", "14:30"], ["19:00", "22:30"]] },
+  {
+    day: 1,
+    ranges: [
+      ["12:00", "14:00"],
+      ["19:00", "22:00"],
+    ],
+  },
+  {
+    day: 2,
+    ranges: [
+      ["12:00", "14:00"],
+      ["19:00", "22:00"],
+    ],
+  },
+  {
+    day: 3,
+    ranges: [
+      ["12:00", "14:00"],
+      ["19:00", "22:00"],
+    ],
+  },
+  {
+    day: 4,
+    ranges: [
+      ["12:00", "14:00"],
+      ["19:00", "22:00"],
+    ],
+  },
+  {
+    day: 5,
+    ranges: [
+      ["12:00", "14:00"],
+      ["19:00", "22:30"],
+    ],
+  },
+  {
+    day: 6,
+    ranges: [
+      ["12:00", "14:30"],
+      ["19:00", "22:30"],
+    ],
+  },
 ]
 
-export const MENU_CATEGORIES = [
+export interface MenuItem {
+  name: { fr: string; en: string }
+  description: { fr: string; en: string }
+  price: string
+  image?: string
+  featured?: boolean
+}
+
+export interface MenuCategory {
+  id: string
+  label: { fr: string; en: string }
+  items: MenuItem[]
+}
+
+export const MENU_CATEGORIES: MenuCategory[] = [
   {
     id: "entrees",
     label: { fr: "Entrées", en: "Starters" },
