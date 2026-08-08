@@ -73,6 +73,8 @@ The site is installable on desktop and mobile. `public/site.webmanifest` defines
 
 To ship a service-worker change, bump `VERSION` at the top of `public/sw.js` — this invalidates the old caches on the next visit.
 
+The home-screen icon (`web-app-manifest-*.png`, `apple-touch-icon.png`) and the iOS splash screens (`public/splash/`) are generated, not hand-drawn: `pnpm icons` runs `scripts/generate-pwa-assets.mjs`, which upscales `public/favicon-96x96.png` for the icons and renders `public/logo.svg` centered on the manifest background color for each splash size. Re-run it after changing either source image.
+
 ## Project layout
 
 ```
