@@ -41,7 +41,7 @@ export const translations = {
     reservation_subheading:
       "Pour un dîner en amoureux, un repas en famille ou un déjeuner d'affaires, nous vous accueillons du lundi au samedi.",
     reservation_cta: "Réserver en ligne",
-    reservation_or: "ou appelez-nous directement",
+    reservation_or: "ou réserver automatiquement via",
 
     // Order block
     order_heading: "À emporter",
@@ -215,7 +215,7 @@ export const translations = {
     reservation_subheading:
       "For a romantic dinner, a family meal or a business lunch, we welcome you Monday to Saturday.",
     reservation_cta: "Book online",
-    reservation_or: "or call us directly",
+    reservation_or: "or book automatically via",
 
     order_heading: "Takeaway",
     order_subheading:

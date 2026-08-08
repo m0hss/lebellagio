@@ -174,15 +174,14 @@ function OrderFormFields({ initialValues = {} }: { initialValues?: OrderInitialV
       </div>
 
       <Button
-        render={<a href={`tel:${RESTAURANT.phoneRaw}`} />}
+        render={<a href={`tel:${RESTAURANT.phoneRaw}`} aria-label={`${t(locale, "order_phone_cta")} ${RESTAURANT.phone}`} />}
         nativeButton={false}
         size="lg"
         variant="outline"
-        className="w-full border-primary/30 text-primary hover:bg-accent gap-2"
+        className="w-full h-auto min-h-9 whitespace-normal border-primary/30 text-primary hover:bg-accent gap-2 px-3 py-2.5 text-center sm:px-2.5"
       >
-        <Phone size={16} aria-hidden="true" />
-        {locale === "fr" ? "Commander par téléphone" : "Order by phone"}
-        <span className="font-semibold ml-1">{RESTAURANT.phone}</span>
+        <Phone size={16} className="shrink-0" aria-hidden="true" />
+        <span className="text-pretty">{t(locale, "order_phone_cta")}</span>
       </Button>
     </form>
   )
